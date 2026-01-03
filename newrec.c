@@ -13,10 +13,10 @@ void wait_for_key() {
 }
 
 struct student {
-    char first_name[20];
-    char last_name[20];
+    char first_name[40];
+    char last_name[40];
     int roll_no;
-    char spec[50];
+    char spec[100];
     float per;
 };
 
@@ -30,7 +30,7 @@ int main() {
     while(choice != 5) {
         clear_screen();
         printf("\t\t\t=====СИСТЕМА ЗА УПРАВЛЕНИЕ НА ДАННИ НА СТУДЕНТИ=====");
-        printf("\n\n\n\t\t\t\t     1. Добавете студент\n");
+        printf("\n\n\t\t\t\t     1. Добавете студент\n");
         printf("\t\t\t\t     2. Всички данни \n");
         printf("\t\t\t\t     3. Намерете студент\n");
         printf("\t\t\t\t     4. Изтрийте студент\n");
@@ -80,7 +80,7 @@ void addstudent() {
             printf("\n\t\t\tДанните бяха успешно добавени!\n");
         }
 
-        printf("\t\t\tДобавете още ученици? (y/n): ");
+        printf("\t\t\tДобавете още студенти? (y/n): ");
         scanf(" %c", &another);
     } while(another == 'y' || another == 'Y');
 }
@@ -160,5 +160,5 @@ void delete_student() {
             printf("\n\t\t\tСтудентът не е намерен.");
         }
     }
-    wait_for_key();
+    wait_for_key(); 
 }
